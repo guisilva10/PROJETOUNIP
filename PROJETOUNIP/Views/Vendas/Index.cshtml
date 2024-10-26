@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Registrar Vendas";
+}
+<div class="text-center">
+   <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+
+    </div>
+
+    <h1 class="display-4">Registrar Vendas</h1>
+    
+    
+    <div class="form-floating mb-3">
+        <input type="codigovenda" class="form-control" id="floatingInput" placeholder="codigovenda">
+        <label for="floatingInput">INSIRA O CÓDIGO DA VENDA</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="idcliente" class="form-control" id="floatingidcliente" placeholder="idcliente">
+        <label for="floatingPassword">INSIRA O ID DO CLIENTE</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="venda" class="form-control" id="floatingvenda" placeholder="venda">
+        <label for="floatingPassword">DATA DA VENDA</label>
+    </div>
+    
+    
+        <a class="btn btn-outline-success" role="button" asp-controller="Vendas" asp-action="Criar">Registrar Venda</a>
+</div>
+
+</div>
