@@ -38,7 +38,7 @@ namespace PROJETOUNIP.Controllers
 
 ## Novas Features do Projeto
 
-Nova view inserida: LoginController:
+Nova view inserida: Login.chtml:
 
 ```code-font:
 @* Views/Login/Login.cshtml *@
