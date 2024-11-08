@@ -1,0 +1,45 @@
+@* Views/Login/Login.cshtml *@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Terra Verde</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+</head>
+<body class="d-flex align-items-center justify-content-center vh-100 bg-light">
+
+    <div class="card shadow p-4" style="width: 100%; max-width: 400px;">
+        <h2 class="text-center mb-4">Login</h2>
+
+        <form asp-action="Authenticate" method="post">
+            <div class="mb-3">
+                <label for="username" class="form-label">Usuário</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Digite seu usuário" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Senha</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Digite sua senha" required />
+            </div>
+
+            @* Exibe mensagem de erro, se houver *@
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <div class="alert alert-danger text-center" role="alert">
+                    @ViewBag.ErrorMessage
+                </div>
+            }
+
+            <button type="submit" class="btn btn-primary w-100">Entrar</button>
+        </form>
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
